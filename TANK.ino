@@ -71,9 +71,19 @@ void go_left(int PWM4)//time4
     analogWrite(M1_PWM, PWM4);
     analogWrite(M2_PWM, PWM4 + 40); //подобрать скорость экспериментально!!!
 }
+void turn_left(int PWM5)//time4
+{
+    digitalWrite(M1_A, LOW);
+    digitalWrite(M1_B, HIGH);
+    digitalWrite(M2_A, LOW);
+    digitalWrite(M2_B, HIGH);
+    analogWrite(M1_PWM, PWM5 + 15);
+    analogWrite(M2_PWM, PWM5 + 15); //подобрать скорость экспериментально!!!
+}
 }
 
 void loop(){
 }
+turn_left(60);
 }
 
