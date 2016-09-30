@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<md:model xmlns:md="http://easykit.informatik.tu-muenchen.de/schema/model" xmlns:dev="http://easykit.informatik.tu-muenchen.de/schema/device" xmlns:kv="http://easykit.informatik.tu-muenchen.de/schema/keyvalue" xmlns:var="http://easykit.informatik.tu-muenchen.de/schema/variable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://easykit.informatik.tu-muenchen.de/schema/model model.xsd">
+
+  <md:settings kv:key="settings">
+    <kv:item kv:key="generic" kv:value="">
+      <kv:item kv:key="executionMode" kv:value="simulation"/>
+    </kv:item>
+    <kv:item kv:key="skill" kv:value="">
+      <kv:item kv:key="deviceSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="unitSkillLevel" kv:value="-1"/>
+      <kv:item kv:key="typeSystemFeatureSkillLevel" kv:value="0"/>
+    </kv:item>
+  </md:settings>
+
+  <md:variables/>
+
+  <md:device>
+    <md:instance md:deviceType="Generic" md:instanceName="Generic">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs/>
+      <md:dynamicUnits/>
+    </md:instance>
+    <md:instance md:deviceType="MyFuncBlocks" md:instanceName="MyFuncBlocks">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs/>
+      <md:dynamicUnits/>
+    </md:instance>
+    <md:instance md:deviceType="REC GmbH Robotino" md:instanceName="Robotino®">
+      <md:dynamicInputs/>
+      <md:dynamicOutputs/>
+      <md:configVarExprs>
+        <md:varExpr md:value="172.26.201.3" md:varname="ipAddress"/>
+        <md:varExpr md:value="172.26.201.3;;172.26.210.3;;172.26.1.1;;127.0.0.1:8080" md:varname="ipAddressHistory"/>
+        <md:varExpr md:value="8080" md:varname="imageServerPort"/>
+        <md:varExpr md:value="(320 240)" md:varname="camera_resolution"/>
+        <md:varExpr md:value="false" md:varname="disableDriveSystem"/>
+        <md:varExpr md:value="9" md:varname="num_axes"/>
+        <md:varExpr md:value="30" md:varname="num_pos_max"/>
+        <md:varExpr md:value="0" md:varname="num_pos"/>
+        <md:varExpr md:value="Pos1" md:varname="pos0_name"/>
+        <md:varExpr md:value="Pos2" md:varname="pos1_name"/>
+        <md:varExpr md:value="Pos3" md:varname="pos2_name"/>
+        <md:varExpr md:value="Pos4" md:varname="pos3_name"/>
+        <md:varExpr md:value="Pos5" md:varname="pos4_name"/>
+        <md:varExpr md:value="Pos6" md:varname="pos5_name"/>
+        <md:varExpr md:value="Pos7" md:varname="pos6_name"/>
+        <md:varExpr md:value="Pos8" md:varname="pos7_name"/>
+        <md:varExpr md:value="Pos9" md:varname="pos8_name"/>
+        <md:varExpr md:value="Pos10" md:varname="pos9_name"/>
+        <md:varExpr md:value="Pos11" md:varname="pos10_name"/>
+        <md:varExpr md:value="Pos12" md:varname="pos11_name"/>
+        <md:varExpr md:value="Pos13" md:varname="pos12_name"/>
+        <md:varExpr md:value="Pos14" md:varname="pos13_name"/>
+        <md:varExpr md:value="Pos15" md:varname="pos14_name"/>
+        <md:varExpr md:value="Pos16" md:varname="pos15_name"/>
+        <md:varExpr md:value="Pos17" md:varname="pos16_name"/>
+        <md:varExpr md:value="Pos18" md:varname="pos17_name"/>
+        <md:varExpr md:value="Pos19" md:varname="pos18_name"/>
+        <md:varExpr md:value="Pos20" md:varname="pos19_name"/>
+        <md:varExpr md:value="Pos21" md:varname="pos20_name"/>
+        <md:varExpr md:value="Pos22" md:varname="pos21_name"/>
+        <md:varExpr md:value="Pos23" md:varname="pos22_name"/>
+        <md:varExpr md:value="Pos24" md:varname="pos23_name"/>
+        <md:varExpr md:value="Pos25" md:varname="pos24_name"/>
+        <md:varExpr md:value="Pos26" md:varname="pos25_name"/>
+        <md:varExpr md:value="Pos27" md:varname="pos26_name"/>
+        <md:varExpr md:value="Pos28" md:varname="pos27_name"/>
+        <md:varExpr md:value="Pos29" md:varname="pos28_name"/>
+        <md:varExpr md:value="Pos30" md:varname="pos29_name"/>
+        <md:varExpr md:value="()" md:varname="pos0"/>
+        <md:varExpr md:value="()" md:varname="pos1"/>
+        <md:varExpr md:value="()" md:varname="pos2"/>
+        <md:varExpr md:value="()" md:varname="pos3"/>
+        <md:varExpr md:value="()" md:varname="pos4"/>
+        <md:varExpr md:value="()" md:varname="pos5"/>
+        <md:varExpr md:value="()" md:varname="pos6"/>
+        <md:varExpr md:value="()" md:varname="pos7"/>
+        <md:varExpr md:value="()" md:varname="pos8"/>
+        <md:varExpr md:value="()" md:varname="pos9"/>
+        <md:varExpr md:value="()" md:varname="pos10"/>
+        <md:varExpr md:value="()" md:varname="pos11"/>
+        <md:varExpr md:value="()" md:varname="pos12"/>
+        <md:varExpr md:value="()" md:varname="pos13"/>
+        <md:varExpr md:value="()" md:varname="pos14"/>
+        <md:varExpr md:value="()" md:varname="pos15"/>
+        <md:varExpr md:value="()" md:varname="pos16"/>
+        <md:varExpr md:value="()" md:varname="pos17"/>
+        <md:varExpr md:value="()" md:varname="pos18"/>
+        <md:varExpr md:value="()" md:varname="pos19"/>
+        <md:varExpr md:value="()" md:varname="pos20"/>
+        <md:varExpr md:value="()" md:varname="pos21"/>
+        <md:varExpr md:value="()" md:varname="pos22"/>
+        <md:varExpr md:value="()" md:varname="pos23"/>
+        <md:varExpr md:value="()" md:varname="pos24"/>
+        <md:varExpr md:value="()" md:varname="pos25"/>
+        <md:varExpr md:value="()" md:varname="pos26"/>
+        <md:varExpr md:value="()" md:varname="pos27"/>
+        <md:varExpr md:value="()" md:varname="pos28"/>
+        <md:varExpr md:value="()" md:varname="pos29"/>
+        <md:varExpr md:value="true" md:varname="line0_enabled"/>
+        <md:varExpr md:value="true" md:varname="line1_enabled"/>
+        <md:varExpr md:value="true" md:varname="line2_enabled"/>
+      </md:configVarExprs>
+      <md:dynamicUnits/>
+    </md:instance>
+  </md:device>
+
+  <md:utspecs>
+    <md:utspec md:id="rec_gmbh_colorrangefinder"/>
+    <md:utspec md:id="rec_gmbh_imagefilter"/>
+    <md:utspec md:id="rec_gmbh_segmenttracker"/>
+    <md:utspec md:id="rec_gmbh_transferfunction"/>
+    <md:utspec md:id="rec_gmbh_robotino_camera"/>
+  </md:utspecs>
+
+  <md:sdfs>
+    <md:sdf md:id="sdfmodel_step1" md:name="Step1">
+      <md:units>
+        <md:unit md:deviceInstanceName="Robotino®" md:id="actor_camera" md:name="Camera" md:type="REC GmbH Robotino Camera" md:utspec="rec_gmbh_robotino_camera" md:variantName="REC GmbH Robotino Camera">
+          <md:outVarExprs>
+            <md:varExpr md:varname="image">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_color_range_finder__1_" md:name="Color range finder (1)" md:type="REC GmbH ColorRangeFinder" md:utspec="rec_gmbh_colorrangefinder" md:variantName="REC GmbH ColorRangeFinder">
+          <md:inVarExprs>
+            <md:varExpr md:value="" md:varname="input">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="(357 8 58 86 47 100)" md:varname="ranges">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="output">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_segment_tracker__1_" md:name="Segment tracker (1)" md:type="REC GmbH SegmentTracker" md:utspec="rec_gmbh_segmenttracker" md:variantName="REC GmbH SegmentTracker">
+          <md:inVarExprs>
+            <md:varExpr md:value="" md:varname="input">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="false" md:varname="restart">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="0" md:varname="init">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1000" md:varname="minarea">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="x">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="area">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="vx">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="vy">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="numsegments">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="output">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_filter__1_" md:name="Filter (1)" md:type="REC GmbH ImageFilter" md:utspec="rec_gmbh_imagefilter" md:variantName="REC GmbH ImageFilter">
+          <md:inVarExprs>
+            <md:varExpr md:value="" md:varname="input">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="1" md:varname="filter">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="3" md:varname="mask">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="output">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+        <md:unit md:deviceInstanceName="Generic" md:id="actor_transfer_function__1_" md:name="Transfer Function (1)" md:type="REC GmbH Transferfunction" md:utspec="rec_gmbh_transferfunction" md:variantName="REC GmbH Transferfunction">
+          <md:stateVarExprs>
+            <md:varExpr md:varname="showCross">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:varname="crossPoint">
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:stateVarExprs>
+          <md:inVarExprs>
+            <md:varExpr md:value="0.000000" md:varname="x">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+            <md:varExpr md:value="-0.260791\;\;0.324699;;5.49296\;\;6.91667" md:varname="points">
+              <md:varProperty md:name="visible" md:value="false"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:inVarExprs>
+          <md:outVarExprs>
+            <md:varExpr md:varname="y">
+              <md:varProperty md:name="visible" md:value="true"/>
+              <md:varProperty md:name="debug" md:value="true"/>
+            </md:varExpr>
+          </md:outVarExprs>
+        </md:unit>
+      </md:units>
+      <md:edges>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_1" md:prod="1">
+          <md:from md:con="image" md:unit="actor_camera"/>
+          <md:to md:con="input" md:unit="actor_color_range_finder__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_2" md:prod="1">
+          <md:from md:con="output" md:unit="actor_color_range_finder__1_"/>
+          <md:to md:con="input" md:unit="actor_filter__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_3" md:prod="1">
+          <md:from md:con="output" md:unit="actor_filter__1_"/>
+          <md:to md:con="input" md:unit="actor_segment_tracker__1_"/>
+        </md:edge>
+        <md:edge md:cons="1" md:delay="0" md:id="edge_4" md:prod="1">
+          <md:from md:con="area" md:unit="actor_segment_tracker__1_"/>
+          <md:to md:con="x" md:unit="actor_transfer_function__1_"/>
+        </md:edge>
+      </md:edges>
+    </md:sdf>
+  </md:sdfs>
+
+  <md:sfcs>
+    <md:sfc md:id="sfcmodel_1">
+      <md:sfcSequence>
+        <md:sfcSimple md:id="sfcitem_simple_init" md:name="Init">
+          <md:timeslice md:nsec="10000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcTransition md:guard="true" md:id="sfcitem_transition"/>
+        <md:sfcSimple md:id="sfcitem_simple_step1" md:name="Step1" md:sdfModel="sdfmodel_step1">
+          <md:timeslice md:nsec="10000000" md:sec="0"/>
+        </md:sfcSimple>
+        <md:sfcTransition md:guard="false" md:id="sfcitem_transition2"/>
+        <md:sfcJump md:dest="sfcitem_simple_init" md:id="sfcitem_jump"/>
+      </md:sfcSequence>
+    </md:sfc>
+  </md:sfcs>
+
+  <md:layout>
+    <md:sdfs>
+      <md:sdf md:active="true" md:sdfmodel="sdfmodel_step1" md:showData="false" md:showToolTips="false" md:tab="1">
+        <md:sdfViewLayout md:data="000000ff00000000fd00000001000000030000000000000000fc010000002afb0000003e0037003500300062003600650063006500340032003800310034003700650039003200620064006100320037003700310061003800340035003500320033020000016b0000018300000164000001c5fb0000003a00350039003900660033003900300066003700360034003500350037006400330036006600390032006100300038006200380035003300380035020000016b0000018300000164000001c5fb000000400036003800660064003600300037006300330039003500660032003200340033003300370064006300340035003600660033003400300063003500610065003202000001cc000000b60000024b000001bdfb0000003e003200340034006100630038003500340062006500640031003500310065003100340034003300370033006400370033003600380032003200300066006402000002ca000000ed0000016400000194fb0000003e003700350063003600360035003700380034003700310033003700320030003700330039003100350036006500330036003700610064003200360066006602000002e60000008900000164000001c5fb000000400031003900350038003700300065006300360032003600370035006200370065003200350030006600310031003800610037003900380032003500650039003102000001f60000013300000102000000defb0000003e0032006300300037003500300033003000310066003500620037003200350038003100640039003700330065003200350038006300620032006100350064020000019f0000008e00000102000000defb0000003e0036006400630063003600340066006300340064003200320033003500300035003400300030006200320062006400380033003000340032006100330034020000016b0000018300000164000001c5fb000000400031003800630066003400620061003100360064006300360033003200370038003100320032006400310063003200320032006200620062003300610037003502000001dc0000012500000102000000defb0000003c00340033006500350037006300320061003300350034006600340066003400310066003700360066003800660033006600380066003700310032003102000001c8000000c30000015300000131fb0000003e003700330065003700370030003900310034003900350030003700390063006500330035003900370034003100390031006500360035003700620063006402000001cc0000019400000102000000defb0000003c003100380064006500330033006500310062003100350033006200390064003100620030006500650030006400340033006300630036006500340061020000021b0000013c00000102000000defb0000003e0033006100660032003200660062003700350066003300630034006400360031003500610034003300350035003700340037006400650034006100320065020000037b0000016f0000012d000000a7fb0000003a003600300039006400320063003100330035003600320063003800320034003200300036003200350030003600330063003900660066006400650200000315000001390000011e000000bafb0000003a00340032003500350037003300300030003100370037006500330032006600340037003500340038003300360037003000350031003900350038020000025b0000015d0000015200000168fb0000003c003100620065006100350036003300330037003000380063003200380035003000350034003800350037003800330033003900620033006300360034020000025b0000015d000001d500000168fb0000003c003200610038003900360037003800620036003700360031003100620062006500310039006200640036006100360063003400380037006400330030020000004e000000ea0000016400000194fb0000003c00330062006600640032006300320062003200310031003300370038003300630061003100370062003000650032003100330063003100620063003202000000c3000001930000024b000001bdfb0000004000370030006200330034003100340039003400610037006300340032003600650035003200610033003600310064003900330063006500380037003900310034020000009f000000b000000164000001c5fb000000400035006300620031003100360062006400340061006300350031003800640036003700650031003400370036003300620031003300390034003700310063006402000002f8000001a600000102000000defb0000003c003100300032006200330031003400310039003000650037006400320064003400380031006400350031003700320039006200660034006100330032020000030700000134000001470000009cfb000000400031006100300035003400310062006200340034006600630034006300340032003400320063003500330062006500640037003500340065003600390063006502000001e7000001a0000001470000009cfb0000003e003300630064003800330061006300390031006200350033003800650038003400340064006300340063003000620033003600340061003300350035003502000001e7000001a0000001470000009cfb0000004000310063006500340035006200390034003300650035006200340030003700370036003500660066003300300034003000320035006100310037006200300032020000017a000000c600000164000001c5fb0000003c0063003900330032003600390034003300610062003700300063003600340062003400300033003900320036003400660036003500320035003000370200000278000001370000015200000168fb0000003e003700320037003300310038006500370034006300350033003400650037003400640031003200310066003800390036003500320066003600330034006102000002af000001a70000018a00000187fb0000003a0031003300650063003100610036003700360030003200650032003100650033003700390061003600610031006600620030003400340061006602000002e50000015d0000012100000087fb0000003c003200310038006200310030003800630039003300660034006100610066003400640062003400350030006400630033006300320063006600390031020000027c0000015e0000016400000200fb0000003c00330061003500350035006300360030003100620061003700380034006300330032006400640035003100650030003800320036003100640031003102000002d6000001380000012800000200fb0000003e00320032003000380034003700330032003700640066006100350066003700650037006600340061003100310030006100640064003100330031003100360200000332000000f20000013d00000270fb0000003c00330064003100340033006500370065003200640065006500380035003700320034003000330062006600640032006600610038003100380066003202000003210000013e0000012000000084fb0000004000370037006200310037006300610035003100310065006100370066006500610031006400660031003700370037003700340064003000350036006600320039020000006c000000970000024b000001bdfb0000003c00340063003300360032003900350037003500320062003600310037003500370037006500370063003500330034006100620034003500330064003402000000dd000000bc0000016400000194fb0000003e00370037003100310037006100630064003600310064003000330033003800650035003100620032003600310065003200310038003300330035006300370200000021000000b200000164000001c5fb0000003a003500340035003000370061006100610035006600320031006300380037003500350032006400340066003600330062003900630063003100650200000315000001a40000015300000131fb00000040003200390065006400310063003600640033003300350032003600630065003900320039003000330034006600300033003400660034003800330034003100620200000288000001310000015300000131fb000000400036003600360064003200390062006400340065003900350032006500610030003100310066003800340066006600340034003600610038003500360038003202ffffff9f000000da0000024b000001bdfb0000003c00340031003300640066006400640064003900300035006500370030003300390064003100370039006400620034006500610062003200660032003702000000a5000000e40000024b000001bdfb0000003e0031003000620062003500380031006300330037003100650032003700390036003600360065003600620033003800370061003300310035003100360064020000004c00000125000001520000014efb00000040003700370037003000370039006200310036006600620066003400610031003500320063006300340037006100310037003100320061006400360035003200660200000082000001590000024b000001bdfb0000003c00610062003700370033006100310065003100370031003400340039003400310036003200370039006200380035003500630034003200360061003302000002a3000001bd00000102000000defb0000004000360038003700300031006200370063003100370066003000320034006600640036006400300035003200340031003000370062003700390034003100630064020000023c000001140000015a0000011b0000054e0000025d00000004000000040000000800000008fc00000000"/>
+        <md:units>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_camera" md:width="-1" md:x="-186" md:y="54"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_color_range_finder__1_" md:width="-1" md:x="-102" md:y="60"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_segment_tracker__1_" md:width="-1" md:x="66" md:y="66"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_filter__1_" md:width="-1" md:x="-18" md:y="60"/>
+          <md:unit md:height="-1" md:nameDisplay="hidden" md:unit="actor_transfer_function__1_" md:width="-1" md:x="270" md:y="60"/>
+        </md:units>
+        <md:nets>
+          <md:net>
+            <md:edge md:edge="edge_1"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_2"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_3"/>
+          </md:net>
+          <md:net>
+            <md:edge md:edge="edge_4"/>
+          </md:net>
+        </md:nets>
+        <md:texts/>
+      </md:sdf>
+    </md:sdfs>
+    <md:sfcs>
+      <md:sfc md:sfcmodel="sfcmodel_1"/>
+    </md:sfcs>
+  </md:layout>
+
+</md:model>
