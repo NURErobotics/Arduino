@@ -1,0 +1,130 @@
+/*
+ 5 - Enable A - PWM control motor А
+ 3 - Enable B - PWM control motor В
+ 4 and 6 - Input 1 - Rotation motor А
+ 2 and 7 - Input 3 - Rotation motor В
+ 
+ A2 - RIGHT SHARP SENSOR
+ A1 - LEFT SHARP SENSOR
+ */
+
+#include <Servo.h>
+
+///////////////////////////PIN DEFINITION//////////////////////////////////////////
+#define SPEED 110
+
+#define servo_pin 8
+
+#define left_sharp A1
+#define right_sharp A2
+#define front_sharp A4
+
+#define PWM_CONTROL_MOTOR_B 3
+#define ROTATION_MOTOR_B_1 2
+#define ROTATION_MOTOR_B_2 7
+///////////////////////////END OF PIN DEFINITION///////////////////////////////////
+
+///////////////////////////SOME CONSTANT VALUES////////////////////////////////////
+#define COEFFICIENT 27.579
+#define DEGREE -1.212
+#define ANALOG_TO_VOLTS 0.0048828125
+
+#define DEGREE_FRONT_SENSOR -1.129
+#define COEFFICIENT_FRONT_SENSOR 11.976
+///////////////////////////END OF SOME CONSTANT VALUES/////////////////////////////
+
+//////////////////////////GLOBAL VARIABLES////////////////////////////////////////
+int right = 0;
+int left = 0;
+float volts = 0, volts_front = 0, dist_front = 0, dist = 0;
+Servo myservo;
+char m_direction[8] = "FORWARD";
+int ror;
+//////////////////////////END OF GLOBAL VARIABLES/////////////////////////////////
+
+float get_sharp_dist(int pin)
+{
+  //CONVERTING THE INPUT VALUE INTO A VOLTAGE VALUE
+  volts = analogRead(pin) * ANALOG_TO_VOLTS; 
+  //CONVERTING THE VOLTS INTO A DISTANCE IN CM
+  dist = COEFFICIENT * pow(volts, DEGREE);
+  
+  if(dist >= 40) {dist = 40;}
+  else if(dist <= 10) {dist = 10;}
+  
+  return dist;
+}
+
+float get_front_sharp_dist(int pin)
+{
+  //CONVERTING THE INPUT VALUE INTO A VOLTAGE VALUE
+  volts_front = analogRead(pin) * ANALOG_TO_VOLTS; 
+  //CONVERTING THE VOLTS INTO A DISTANCE IN CM
+  dist_front = COEFFICIENT_FRONT_SENSOR * pow(volts, DEGREE_FRONT_SENSOR);
+  
+  if(dist_front >= 30) {dist_front = 30;}
+  else if(dist_front <= 3) {dist_front = 3;}
+
+  return dist_front;
+}
+
+boolean motion(char major_motor_rotation[9], int major_motor_speed, int servo_pos) //FORWARD/BACKWARD/STOP, 0-255, LEFT/RIGHT/NO
+{
+  myservo.write(servo_pos);
+
+  //MAJOR MOTOR CONTROL
+  if (major_motor_rotation == "FORWARD")
+  {
+    digitalWrite(ROTATION_MOTOR_B_1, HIGH);
+    digitalWrite(ROTATION_MOTOR_B_2, LOW);
+    analogWrite(PWM_CONTROL_MOTOR_B, major_motor_speed);
+  }
+  else if (major_motor_rotation == "BACKWARD")
+  {
+    digitalWrite(ROTATION_MOTOR_B_1, LOW);
+    digitalWrite(ROTATION_MOTOR_B_2, HIGH);
+    analogWrite(PWM_CONTROL_MOTOR_B, major_motor_speed);
+  }
+  else if (major_motor_rotation == "STOP")
+  {
+    digitalWrite(ROTATION_MOTOR_B_1, LOW);
+    digitalWrite(ROTATION_MOTOR_B_2, LOW);
+    analogWrite(PWM_CONTROL_MOTOR_B, 0);
+  }
+  
+ if(SPEED < 65)
+  {
+  return true;
+  }
+ else
+  { 
+  return false;
+ }
+}
+
+void setup()
+{
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
+  pinMode(front_sharp, INPUT);
+  
+  myservo.attach(servo_pin);
+
+  pinMode(ROTATION_MOTOR_B_1, OUTPUT);
+  pinMode(ROTATION_MOTOR_B_2, OUTPUT);
+  pinMode(PWM_CONTROL_MOTOR_B, OUTPUT);
+  ror = (int)(0.5*(get_sharp_dist(right_sharp) - get_sharp_dist(left_sharp)) + 35);
+  /////////////////////////BEFORE LOOP OPERATIONS//////////////////// 
+}
+
+void loop()
+{
+  if(motion(m_direction, (int)(11.836*pow((get_front_sharp_dist(front_sharp) + 4), 0.6574)),ror)){
+    strcpy(m_direction, "BACKWARD");
+    ror = 180 - (int)(0.5*(get_sharp_dist(right_sharp) - get_sharp_dist(left_sharp)) + 35);
+    }
+  else{
+    strcpy(m_direction, "FORWARD");
+    ror = (int)(0.5*(get_sharp_dist(right_sharp) - get_sharp_dist(left_sharp)) + 35);
+    }
+}
